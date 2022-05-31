@@ -7,11 +7,12 @@ namespace LionBankExampleProject.Tests
     [TestClass]
     public class UnitTest1
     {
+        //CURRENCY RATE POSITIVE VALUE
         [TestMethod]
-        [Description("Test the admin function of changing the property: interest rate, to another positive number")]
+        [Description("Test the admin function of changing the property: interest rate")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Change_EurRate_To_Positive_Number_Return_Positive_EurRate()
+        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_New_Decimal_Value_Of_InterestRate()
         {
             //AAA 
 
@@ -26,12 +27,33 @@ namespace LionBankExampleProject.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
+        
+        //CURRENCY RATE NEGATIVE VALUE
         [TestMethod]
-        [Description("Test the admin function of changing the property: euro currencyrate, to another positive number")]
+        //[Ignore]
+        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_EurRate_To_Remain()
+        {
+            //AAA 
+
+            //Arrange
+            Admin testAdmin = new Admin("TestAdm", "TestAdm1") { };
+
+            //Act 
+            Admin.CurrencyRates(/*System.ConsoleKey.D2*/ 2, "-9");
+            var actual = Admin.EurRate;
+            var expected = -9m;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //INTEREST RATE POSITIVE VALUE
+        [TestMethod]
+        [Description("Test the admin function of changing the property: euro currencyrate")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Change_InterestRate_To_Positive_Number_Return_Positive_InterestRate()
+        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_New_Decimal_Value_Of_InterestRate()
         {
             //AAA 
 
@@ -45,14 +67,34 @@ namespace LionBankExampleProject.Tests
 
             //Assert
             Assert.AreEqual(actual, expected);
-
         }
 
+        //INTEREST RATE NEGATIVE VALUE
+        [TestMethod]
+        //[Ignore]
+        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_InterestRate_To_Remain()
+        {
+            //AAA 
+
+            //Arrange
+            Admin testAdmin = new Admin("TestAdm", "TestAdm1") { };
+
+            //Act 
+            Admin.ChangeInterestRate("-5");
+            var actual = Admin.InterestRate;
+            var expected = -0.05m;
+
+            //Assert
+            Assert.AreEqual(actual, expected);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //TAKE LOAN POSITIVE VALUE
         [TestMethod]
         [Description("Test the function 'Loans' with 'positive ' input and result in increased value of the decimal property 'balance'.")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Replace_User_Input_LoanAmount_With_Predetermined_Postitive_Value_Expect_Increased_Balance()
+        public void Take_Loan_With_Predetermined_UserInput_Of_A_String_Representing_Positive_Value_Expect_Increased_Balance()
         {
             //AAA 
 
@@ -68,11 +110,12 @@ namespace LionBankExampleProject.Tests
             Assert.AreEqual(actual, expected);
         }
 
+        //TAKE LOAN NEGATIVE VALUE
         [TestMethod]
         [Description("Test the function 'Loans' with 'negative' input to see if 'balance' remains or lose value.")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Replace_User_Input_LoanAmount_With_Predetermined_Negative_Value_Expect_Balance_To_Remain()
+        public void Take_Loan_With_Predetermined_UserInput_Of_A_String_Representing_Negative_Value_Expect_Balance_To_Remain()
         {
             //AAA 
 
