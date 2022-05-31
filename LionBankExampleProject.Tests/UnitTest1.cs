@@ -12,7 +12,7 @@ namespace LionBankExampleProject.Tests
         [Description("Test the admin function of changing the property: interest rate")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_New_Decimal_Value_Of_InterestRate()
+        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_New_Decimal_Positive_Value_Of_InterestRate()
         {
             //AAA 
 
@@ -25,13 +25,13 @@ namespace LionBankExampleProject.Tests
             var expected = 9m;
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //EXPECTED GREEN, BECAME GREEN
         }
         
         //CURRENCY RATE NEGATIVE VALUE
         [TestMethod]
         //[Ignore]
-        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_EurRate_To_Remain()
+        public void Change_EurRate_With_Pretedermined_Input_Of_An_IntValue_And_String_Expect_Value_Of_EurRate_To_Remain()
         {
             //AAA 
 
@@ -44,7 +44,7 @@ namespace LionBankExampleProject.Tests
             var expected = -9m;
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //EXPECTED RED, BECAME GREEN
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ namespace LionBankExampleProject.Tests
         [Description("Test the admin function of changing the property: euro currencyrate")]
         [Owner("Erik R")]
         //[Ignore]
-        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_New_Decimal_Value_Of_InterestRate()
+        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_New_Decimal_Positive_Value_Of_InterestRate()
         {
             //AAA 
 
@@ -66,13 +66,13 @@ namespace LionBankExampleProject.Tests
             var expected = 0.05m;
 
             //Assert
-            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(actual, expected); //EXPECTED GREEN, BECAME GREEN
         }
 
         //INTEREST RATE NEGATIVE VALUE
         [TestMethod]
         //[Ignore]
-        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_InterestRate_To_Remain()
+        public void Change_InterestRate_With_Pretedermined_Input_Of_A_String_Expect_Value_Of_InterestRate_To_Remain()
         {
             //AAA 
 
@@ -85,7 +85,7 @@ namespace LionBankExampleProject.Tests
             var expected = -0.05m;
 
             //Assert
-            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(actual, expected); //EXPECTED RED, BECAME GREEN
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -107,7 +107,7 @@ namespace LionBankExampleProject.Tests
             var expected = 11000;
 
             //Assert
-            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(actual, expected); //EXPECTED GREEN, BECAME GREEN
         }
 
         //TAKE LOAN NEGATIVE VALUE
@@ -128,7 +128,7 @@ namespace LionBankExampleProject.Tests
             var expected = 20000;
 
             //Assert
-            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(actual, expected); //EXPECTED GREEN, BECAME RED
         }
     }
 }
