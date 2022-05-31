@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionBankExampleProject", "LionBankExampleProject\LionBankExampleProject.csproj", "{F50F807F-FB63-47C2-AB2E-F11AC23E36AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionBankExampleProject.Tests", "LionBankExampleProject.Tests\LionBankExampleProject.Tests.csproj", "{C0184409-321B-4261-B435-AA569CA49DD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F50F807F-FB63-47C2-AB2E-F11AC23E36AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50F807F-FB63-47C2-AB2E-F11AC23E36AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50F807F-FB63-47C2-AB2E-F11AC23E36AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50F807F-FB63-47C2-AB2E-F11AC23E36AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0184409-321B-4261-B435-AA569CA49DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0184409-321B-4261-B435-AA569CA49DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0184409-321B-4261-B435-AA569CA49DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0184409-321B-4261-B435-AA569CA49DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C6FCD82-ECFC-43B2-8970-FB9D83EE178E}
+	EndGlobalSection
+EndGlobal
